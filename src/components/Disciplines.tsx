@@ -13,17 +13,15 @@ export default function Disciplines() {
   return (
     <section className="bg-dojo-black py-24 md:py-36 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
-        {/* Karate-Do */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-16 mb-32 md:mb-40">
-          <div className="md:col-span-5">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-20">
+          {/* Karate-Do */}
+          <div>
             <FadeIn>
               <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-yellow mb-8">Karate-Do</p>
               <h2 className="font-display text-4xl md:text-6xl leading-none text-dojo-cream mb-8">
                 空手道
               </h2>
             </FadeIn>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
             <FadeIn delay={0.2}>
               <div className="space-y-5 text-dojo-cream/70 text-base md:text-lg leading-relaxed">
                 <p className="text-dojo-cream/90 text-xl md:text-2xl font-display italic">
@@ -41,26 +39,22 @@ export default function Disciplines() {
             {/* Image break */}
             <FadeIn delay={0.4}>
               <img
-                src="/images/alumno_2.jpg"
-                alt="Alumno de karate"
+                src="/images/caminoDeLasManosVacias.png"
+                alt="El camino de las manos vacías"
                 loading="lazy"
                 className="w-full mt-12 aspect-[16/9] object-cover rounded-2xl"
               />
             </FadeIn>
           </div>
-        </div>
 
-        {/* Kobudo */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-16">
-          <div className="md:col-span-5">
+          {/* Kobudo */}
+          <div>
             <FadeIn>
               <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-yellow mb-8">Kobudo — Jinbukai Internacional</p>
               <h2 className="font-display text-4xl md:text-6xl leading-none text-dojo-cream mb-8">
                 古武道
               </h2>
             </FadeIn>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
             <FadeIn delay={0.2}>
               <div className="space-y-5 text-dojo-cream/70 text-base md:text-lg leading-relaxed mb-12">
                 <p>

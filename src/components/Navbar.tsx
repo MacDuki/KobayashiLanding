@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
-  { label: 'Historia', href: '#historia' },
   { label: 'Clases', href: '#clases' },
-  { label: 'Senseis', href: '#senseis' },
   { label: 'Planes', href: '#planes' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Ubicación', href: '#ubicacion' },
@@ -73,9 +71,9 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             className="md:hidden flex flex-col items-center justify-center gap-1.5 w-10 h-10"
           >
-            <span className={`block w-6 h-px bg-dojo-cream transition-transform duration-300 ${menuOpen ? 'translate-y-[3.5px] rotate-45' : ''}`} />
+            <span className={`block w-6 h-px bg-dojo-cream transition-transform duration-300 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
             <span className={`block w-6 h-px bg-dojo-cream transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-px bg-dojo-cream transition-transform duration-300 ${menuOpen ? '-translate-y-[3.5px] -rotate-45' : ''}`} />
+            <span className={`block w-6 h-px bg-dojo-cream transition-transform duration-300 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
           </button>
         </div>
 

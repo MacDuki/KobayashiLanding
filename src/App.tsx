@@ -2,7 +2,6 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrainingExperience from './components/TrainingExperience'
 import Benefits from './components/Benefits'
-import Senseis from './components/Senseis'
 import Disciplines from './components/Disciplines'
 
 import SchedulePricing from './components/SchedulePricing'
@@ -20,7 +19,6 @@ export default function App() {
         <Hero />
         <TrainingExperience />
         <Benefits />
-        <Senseis />
         <Disciplines />
         <SchedulePricing />
         <FAQ />
