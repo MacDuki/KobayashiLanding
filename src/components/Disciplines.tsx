@@ -1,19 +1,28 @@
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 import FadeIn from './FadeIn'
 
 const weapons = [
-  { name: 'Bo (Kun)', desc: 'Bastón de ~1,80 m. El arma principal.' },
-  { name: 'Sai', desc: 'Tridente metálico. Usado en pares o de a tres.' },
-  { name: 'Nunchaku', desc: 'Dos piezas unidas por cuerda o cadena.' },
-  { name: 'Tonfa', desc: 'Mango de mortero. Base de los bastones policiales modernos.' },
-  { name: 'Kama', desc: 'Hoz agrícola. Se usa en pares.' },
-  { name: 'Eiku', desc: 'Remo de pescador. Comparte técnicas con el Bo.' },
+  { name: 'Bo (Kun)', desc: 'Bastón de ~1,80 m. El arma principal.', image: '/images/Bo (Kun).png' },
+  { name: 'Sai', desc: 'Tridente metálico. Usado en pares o de a tres.', image: '/images/sai.png' },
+  { name: 'Nunchaku', desc: 'Dos piezas unidas por cuerda o cadena.', image: '/images/Nunchaku.png' },
+  { name: 'Tonfa', desc: 'Mango de mortero. Base de los bastones policiales modernos.', image: '/images/Tonfa.png' },
+  { name: 'Kama', desc: 'Hoz agrícola. Se usa en pares.', image: '/images/Kama.png' },
+  { name: 'Eiku', desc: 'Remo de pescador. Comparte técnicas con el Bo.', image: '/images/Eiku.png' },
 ]
 
 export default function Disciplines() {
+  const [current, setCurrent] = useState(0)
+
+  const prev = () => setCurrent((i) => (i - 1 + weapons.length) % weapons.length)
+  const next = () => setCurrent((i) => (i + 1) % weapons.length)
+
+  const weapon = weapons[current]
+
   return (
     <section className="bg-dojo-black py-24 md:py-36 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 md:gap-20">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-start">
           {/* Karate-Do */}
           <div>
             <FadeIn>
@@ -42,7 +51,7 @@ export default function Disciplines() {
                 src="/images/caminoDeLasManosVacias.png"
                 alt="El camino de las manos vacías"
                 loading="lazy"
-                className="w-full mt-12 aspect-[16/9] object-cover rounded-2xl"
+                className="w-full mt-28 aspect-[16/9] object-cover rounded-2xl"
               />
             </FadeIn>
           </div>
@@ -56,36 +65,74 @@ export default function Disciplines() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div className="space-y-5 text-dojo-cream/70 text-base md:text-lg leading-relaxed mb-12">
-                <p>
-                  El Kobudo de Okinawa es el arte marcial tradicional de las armas. Muchas de ellas derivan de herramientas cotidianas de agricultores y pescadores que, ante la prohibición de portar armas, transformaron sus instrumentos de trabajo en medios de defensa.
-                </p>
-                <p className="text-dojo-cream/90 text-lg font-display italic">
-                  Jinbu Fusatsu: "el sabio con arte marcial vence sin matar y triunfa sin enfrentamiento."
-                </p>
-              </div>
+              <p className="text-dojo-cream/90 text-xl md:text-2xl font-display italic mb-5">
+                "El camino antiguo de las armas"
+              </p>
+              <p className="text-dojo-cream/70 text-base md:text-lg leading-relaxed mb-12">
+                El Kobudo de Okinawa es el arte marcial tradicional de las armas. Muchas de ellas derivan de herramientas cotidianas de agricultores y pescadores que, ante la prohibición de portar armas, transformaron sus instrumentos de trabajo en medios de defensa.
+              </p>
             </FadeIn>
 
-            {/* Weapons grid - editorial, not cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
-              {weapons.map((weapon, i) => (
-                <FadeIn key={weapon.name} delay={0.3 + i * 0.08}>
-                  <div className="py-4 border-b border-dojo-cream/5">
-                    <p className="text-dojo-cream text-sm md:text-base font-medium">{weapon.name}</p>
-                    <p className="text-dojo-muted text-sm mt-0.5">{weapon.desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
+            {/* Weapon carousel */}
+            <FadeIn delay={0.3}>
+              <div className="mb-8">
+                <div className="flex items-center justify-between gap-4">
+                  <button
+                    onClick={prev}
+                    aria-label="Arma anterior"
+                    className="w-11 h-11 rounded-full border border-dojo-cream/20 flex items-center justify-center text-dojo-cream/70 hover:text-dojo-cream hover:border-dojo-cream/40 transition-colors duration-300"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
 
-            {/* Image break */}
-            <FadeIn delay={0.5}>
-              <img
-                src="/images/alumno_4.jpg"
-                alt="Alumno de kobudo"
-                loading="lazy"
-                className="w-full mt-12 aspect-[16/9] object-cover rounded-2xl"
-              />
+                  <div className="flex-1 min-w-0 text-center">
+                    <p className="text-dojo-cream text-base md:text-lg font-medium">{weapon.name}</p>
+                    <p className="text-dojo-muted text-sm mt-1">{weapon.desc}</p>
+                  </div>
+
+                  <button
+                    onClick={next}
+                    aria-label="Arma siguiente"
+                    className="w-11 h-11 rounded-full border border-dojo-cream/20 flex items-center justify-center text-dojo-cream/70 hover:text-dojo-cream hover:border-dojo-cream/40 transition-colors duration-300"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Dots */}
+                <div className="flex items-center justify-center gap-2 mt-6">
+                  {weapons.map((w, i) => (
+                    <button
+                      key={w.name}
+                      onClick={() => setCurrent(i)}
+                      aria-label={w.name}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        i === current ? 'w-6 bg-dojo-yellow' : 'w-1.5 bg-dojo-cream/20 hover:bg-dojo-cream/40'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden rounded-2xl aspect-[16/9]">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={weapon.image}
+                    src={weapon.image}
+                    alt={weapon.name}
+                    loading="lazy"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </AnimatePresence>
+              </div>
             </FadeIn>
           </div>
         </div>
