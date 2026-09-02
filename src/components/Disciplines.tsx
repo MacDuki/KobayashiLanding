@@ -69,6 +69,7 @@ export default function Disciplines() {
                 "El camino antiguo de las armas"
               </p>
               <p className="text-dojo-cream/70 text-base md:text-lg leading-relaxed mb-12">
+                <em>Ko</em> = viejo, <em>bu</em> = arma, <em>dō</em> = camino.
                 El Kobudo de Okinawa es el arte marcial tradicional de las armas. Muchas de ellas derivan de herramientas cotidianas de agricultores y pescadores que, ante la prohibición de portar armas, transformaron sus instrumentos de trabajo en medios de defensa.
               </p>
             </FadeIn>
