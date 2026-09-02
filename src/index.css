@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dojo-black: #1e1b16;
+  --color-dojo-yellow: #f7c200;
+  --color-dojo-cream: #f5f0e8;
+  --color-dojo-muted: #8a857d;
+  --font-family-display: "Playfair Display", serif;
+  --font-family-body: Inter, sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #1e1b16;
+  }
+
+  body {
+    background-color: #1e1b16;
+    color: #f5f0e8;
+    font-family: Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(247, 194, 0, 0.3);
+    color: #f5f0e8;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1e1b16;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2a2722;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+.senseiImage {
+  object-position: center 30%;
+}

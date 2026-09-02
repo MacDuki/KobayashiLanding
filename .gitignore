@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Archivos de trabajo / contenido no versionable (duplicados en la raiz)
+/alumno_*.jpg
+/alumno_*.png
+/clase_ejemplo_*.png
+/profe_*.png
+/profe_*.jpg
+/*.mp4
+/*.docx
+/*.md
+/webLandingV1*.*
