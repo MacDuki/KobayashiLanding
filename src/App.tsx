@@ -1,8 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Tradition from './components/Tradition'
-import Benefits from './components/Benefits'
 import TrainingExperience from './components/TrainingExperience'
+import Benefits from './components/Benefits'
 import Senseis from './components/Senseis'
 import Disciplines from './components/Disciplines'
 
@@ -19,9 +18,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Tradition />
-        <Benefits />
         <TrainingExperience />
+        <Benefits />
         <Senseis />
         <Disciplines />
         <SchedulePricing />

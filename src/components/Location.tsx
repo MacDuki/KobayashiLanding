@@ -10,8 +10,13 @@ export default function Location() {
               <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-muted mb-10">
                 Dónde estamos
               </p>
-              <h2 className="font-display text-3xl md:text-5xl leading-tight text-dojo-cream mb-8">
-                Club Centro Protección de Choferes
+              <h2 className="font-display text-3xl md:text-5xl leading-tight text-dojo-cream mb-8 flex items-center gap-4">
+                <img
+                  src="/images/logoCentro de proteccion de choferes.png"
+                  alt="Centro Protección de Choferes"
+                  className="h-12 md:h-16 w-auto"
+                />
+                <span>Club Centro Protección de Choferes</span>
               </h2>
               <div className="space-y-3 text-dojo-cream/70 text-sm md:text-base leading-relaxed">
                 <p>Soriano 1227</p>
