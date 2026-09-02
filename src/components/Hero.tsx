@@ -11,7 +11,7 @@ export default function Hero() {
         className="hidden lg:flex flex-col items-center absolute left-0 bottom-0 z-10"
       >
         <img
-          src="/images/optimized/profe_lucas_final.webp"
+          src="./images/optimized/profe_lucas_final.webp"
           alt="Sensei Lucas Le Pera"
           width="900"
           height="780"
@@ -38,7 +38,7 @@ export default function Hero() {
         className="hidden lg:flex flex-col items-center absolute right-0 bottom-0 z-10"
       >
         <img
-          src="/images/optimized/profe_leopoldo_hero.webp"
+          src="./images/optimized/profe_leopoldo_hero.webp"
           alt="Sensei Leopoldo Schiavone"
           width="900"
           height="974"
@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <img
-              src="/images/optimized/bg_hero_central.webp"
+              src="./images/optimized/bg_hero_central.webp"
               alt="Kobayashi Karate Dojo"
               width="900"
               height="866"

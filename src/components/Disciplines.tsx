@@ -3,12 +3,12 @@ import { useState } from 'react'
 import FadeIn from './FadeIn'
 
 const weapons = [
-  { name: 'Bo (Kun)', desc: 'Bastón de ~1,80 m. El arma principal.', image: '/images/optimized/Bo (Kun).webp' },
-  { name: 'Sai', desc: 'Tridente metálico. Usado en pares o de a tres.', image: '/images/optimized/sai.webp' },
-  { name: 'Nunchaku', desc: 'Dos piezas unidas por cuerda o cadena.', image: '/images/optimized/Nunchaku.webp' },
-  { name: 'Tonfa', desc: 'Mango de mortero. Base de los bastones policiales modernos.', image: '/images/optimized/Tonfa.webp' },
-  { name: 'Kama', desc: 'Hoz agrícola. Se usa en pares.', image: '/images/optimized/Kama.webp' },
-  { name: 'Eiku', desc: 'Remo de pescador. Comparte técnicas con el Bo.', image: '/images/optimized/Eiku.webp' },
+  { name: 'Bo (Kun)', desc: 'Bastón de ~1,80 m. El arma principal.', image: './images/optimized/Bo (Kun).webp' },
+  { name: 'Sai', desc: 'Tridente metálico. Usado en pares o de a tres.', image: './images/optimized/sai.webp' },
+  { name: 'Nunchaku', desc: 'Dos piezas unidas por cuerda o cadena.', image: './images/optimized/Nunchaku.webp' },
+  { name: 'Tonfa', desc: 'Mango de mortero. Base de los bastones policiales modernos.', image: './images/optimized/Tonfa.webp' },
+  { name: 'Kama', desc: 'Hoz agrícola. Se usa en pares.', image: './images/optimized/Kama.webp' },
+  { name: 'Eiku', desc: 'Remo de pescador. Comparte técnicas con el Bo.', image: './images/optimized/Eiku.webp' },
 ]
 
 export default function Disciplines() {
@@ -48,7 +48,7 @@ export default function Disciplines() {
             {/* Image break */}
             <FadeIn delay={0.4}>
               <img
-                src="/images/optimized/caminoDeLasManosVacias.webp"
+                src="./images/optimized/caminoDeLasManosVacias.webp"
                 alt="El camino de las manos vacías"
                 width="1000"
                 height="667"

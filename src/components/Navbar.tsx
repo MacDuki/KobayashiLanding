@@ -46,7 +46,7 @@ export default function Navbar() {
             className="flex items-center gap-2 md:gap-3 font-display text-lg md:text-2xl tracking-[0.15em] text-dojo-cream hover:text-white transition-colors duration-500"
           >
             <img
-              src="/images/optimized/logoKOBAYASHI.webp"
+              src="./images/optimized/logoKOBAYASHI.webp"
               alt="Kobayashi"
               width="320"
               height="316"

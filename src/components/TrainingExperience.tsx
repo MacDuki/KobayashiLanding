@@ -34,7 +34,7 @@ export default function TrainingExperience() {
           <FadeIn delay={0.3}>
             <div className="relative overflow-hidden rounded-2xl w-full max-w-3xl mx-auto">
               <img
-                src="/images/optimized/profe_leopoldo_con_alumna.webp"
+                src="./images/optimized/profe_leopoldo_con_alumna.webp"
                 alt="Sensei Leopoldo instruyendo a una alumna"
                 width="1000"
                 height="1333"

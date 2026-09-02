@@ -4,13 +4,13 @@ const senseis = [
   {
     name: "Leopoldo Schiavone",
     rank: "3er Dan",
-    image: "/images/optimized/profe_leopoldo.webp",
+    image: "./images/optimized/profe_leopoldo.webp",
     alt: "Sensei Leopoldo Schiavone",
   },
   {
     name: "Lucas Le Pera",
     rank: "1er Dan",
-    image: "/images/optimized/profe_lucas_final.webp",
+    image: "./images/optimized/profe_lucas_final.webp",
     alt: "Sensei Lucas Le Pera",
   },
 ];
