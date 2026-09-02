@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import FadeIn from './FadeIn'
 
 const weapons = [
@@ -11,13 +11,55 @@ const weapons = [
   { name: 'Eiku', desc: 'Remo de pescador. Comparte técnicas con el Bo.', image: './images/optimized/Eiku.webp' },
 ]
 
+const weaponImageCache = new Map<string, Promise<void>>()
+
+function preloadWeaponImage(src: string) {
+  const cachedImage = weaponImageCache.get(src)
+  if (cachedImage) return cachedImage
+
+  const imageLoad = new Promise<void>((resolve, reject) => {
+    const image = new Image()
+    image.decoding = 'async'
+    image.onload = () => {
+      const decodedImage = image.decode?.()
+      if (decodedImage) {
+        void decodedImage.then(resolve).catch(resolve)
+      } else {
+        resolve()
+      }
+    }
+    image.onerror = () => reject(new Error(`No se pudo cargar ${src}`))
+    image.src = src
+  })
+
+  weaponImageCache.set(src, imageLoad)
+  return imageLoad
+}
+
 export default function Disciplines() {
   const [current, setCurrent] = useState(0)
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
+
+  useEffect(() => {
+    const nextIndex = (current + 1) % weapons.length
+    void preloadWeaponImage(weapons[nextIndex].image).catch(() => undefined)
+  }, [current])
+
+  useEffect(() => {
+    const preloadTimeout = window.setTimeout(() => {
+      weapons.forEach((weapon) => {
+        void preloadWeaponImage(weapon.image).catch(() => undefined)
+      })
+    }, 1200)
+
+    return () => window.clearTimeout(preloadTimeout)
+  }, [])
 
   const prev = () => setCurrent((i) => (i - 1 + weapons.length) % weapons.length)
   const next = () => setCurrent((i) => (i + 1) % weapons.length)
 
   const weapon = weapons[current]
+  const isImageReady = loadedImages[weapon.image] === true
 
   return (
     <section className="bg-dojo-black py-14 md:py-20 px-8 md:px-12">
@@ -129,9 +171,11 @@ export default function Disciplines() {
                     alt={weapon.name}
                     width="900"
                     height="600"
-                    loading="lazy"
+                    loading={current === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    onLoad={() => setLoadedImages((images) => ({ ...images, [weapon.image]: true }))}
                     initial={{ opacity: 0, scale: 1.05, x: 40 }}
-                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    animate={isImageReady ? { opacity: 1, scale: 1, x: 0 } : { opacity: 0, scale: 1.05, x: 40 }}
                     exit={{ opacity: 0, scale: 0.95, x: -40 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                     className="absolute inset-0 w-full h-full object-cover"
