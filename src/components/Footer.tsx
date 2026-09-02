@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-dojo-black border-t border-dojo-cream/10 px-8 md:px-12 py-12">
+    <footer id="footer" className="bg-dojo-black border-t border-dojo-cream/10 px-8 md:px-12 py-12">
       <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <p className="font-display text-lg tracking-[0.15em] text-dojo-cream">KOBAYASHI</p>

@@ -7,12 +7,23 @@ export default function FloatingWpp() {
   useEffect(() => {
     const handleScroll = () => {
       const locationEl = document.getElementById('ubicacion')
-      if (locationEl) {
-        const locationBottom = locationEl.getBoundingClientRect().bottom
-        setVisible(locationBottom > 0)
-      } else {
-        setVisible(true)
+      const footerEl = document.getElementById('footer')
+      let show = true
+
+      if (footerEl) {
+        const footerTop = footerEl.getBoundingClientRect().top
+        const overlapThreshold = footerTop - window.innerHeight
+        if (overlapThreshold < 0) {
+          show = false
+        }
       }
+
+      if (show && locationEl) {
+        const locationBottom = locationEl.getBoundingClientRect().bottom
+        show = locationBottom > 0
+      }
+
+      setVisible(show)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
