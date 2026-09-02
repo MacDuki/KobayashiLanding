@@ -17,9 +17,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Disciplines />
         <TrainingExperience />
         <Benefits />
-        <Disciplines />
         <SchedulePricing />
         <FAQ />
         <Location />
