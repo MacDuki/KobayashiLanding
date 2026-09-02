@@ -13,13 +13,13 @@ export default function Hero() {
         <img
           src="/images/profe_lucas_final.png"
           alt="Sensei Lucas Le Pera"
-          className="h-[80vh] w-auto object-contain mix-blend-lighten"
+          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
-          <p className="font-display text-2xl text-dojo-cream leading-tight">
+          <p className="font-display text-lg xl:text-2xl text-dojo-cream leading-tight">
             Lucas Le Pera
           </p>
-          <p className="text-dojo-yellow text-xs tracking-[0.25em] uppercase mt-1">
+          <p className="text-dojo-yellow text-[10px] xl:text-xs tracking-[0.25em] uppercase mt-1">
             1er Dan
           </p>
         </div>
@@ -35,13 +35,13 @@ export default function Hero() {
         <img
           src="/images/profe_leopoldo_hero.png"
           alt="Sensei Leopoldo Schiavone"
-          className="h-[80vh] w-auto object-contain mix-blend-lighten"
+          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
-          <p className="font-display text-2xl text-dojo-cream leading-tight">
+          <p className="font-display text-lg xl:text-2xl text-dojo-cream leading-tight">
             Leopoldo Schiavone
           </p>
-          <p className="text-dojo-yellow text-xs tracking-[0.25em] uppercase mt-1">
+          <p className="text-dojo-yellow text-[10px] xl:text-xs tracking-[0.25em] uppercase mt-1">
             3er Dan
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[42vw] aspect-square rounded-full overflow-hidden flex items-center justify-center"
+          className="relative w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[36vw] xl:w-[42vw] aspect-square rounded-full overflow-hidden flex items-center justify-center"
         >
           <img
             src="/images/bg_hero_central.png"
