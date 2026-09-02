@@ -21,34 +21,44 @@ const deportiva = {
 export default function SchedulePricing() {
 
   return (
-    <section id="planes" className="bg-dojo-black py-24 md:py-36 px-8 md:px-12">
+    <section id="planes" className="bg-dojo-black py-14 md:py-20 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
         <FadeIn>
-          <p className="text-sm md:text-base tracking-[0.3em] uppercase text-dojo-cream mb-16 text-center font-medium">
-            Planes y Horarios
+          <p className="text-sm md:text-base tracking-[0.3em] uppercase text-dojo-yellow mb-4 text-center font-medium">
+            Horarios y cuota
           </p>
+          <h2 className="font-display text-3xl md:text-5xl text-dojo-cream text-center mb-12 md:mb-16">
+            Vení a entrenar martes y jueves.
+          </h2>
         </FadeIn>
 
-        <div className="flex flex-col gap-16">
-          <FadeIn>
-            <div className="w-1/3 mx-auto">
-              <div className="border border-dojo-cream/10 rounded-2xl bg-dojo-cream/[0.02] shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)] overflow-hidden">
+        <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-start max-w-5xl mx-auto">
+          <FadeIn className="md:col-span-3">
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <div>
+                  <p className="text-dojo-cream text-lg md:text-xl">Horarios de clase</p>
+                  <p className="text-dojo-muted text-sm mt-1">Martes y jueves</p>
+                </div>
+                <span className="text-dojo-yellow text-xs tracking-[0.15em] uppercase">Montevideo</span>
+              </div>
+              <div className="border border-dojo-cream/10 rounded-xl bg-dojo-cream/2 overflow-hidden">
                 {schedule.map((item, i) => (
                   <div
                     key={item.label}
-                    className={`flex items-baseline justify-between px-6 py-4 ${i < schedule.length - 1 ? 'border-b border-dojo-cream/5' : ''}`}
+                    className={`flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 px-5 md:px-6 py-4 ${i < schedule.length - 1 ? 'border-b border-dojo-cream/5' : ''}`}
                   >
                     <p className="text-dojo-cream text-sm md:text-base">{item.label}</p>
-                    <p className="text-dojo-muted text-sm ml-4 whitespace-nowrap">{item.time}</p>
+                    <p className="text-dojo-muted text-sm sm:ml-4 whitespace-nowrap">{item.time} hs</p>
                   </div>
                 ))}
               </div>
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="w-1/5 mx-auto">
-              <div className="relative border border-dojo-yellow/30 rounded-2xl px-6 py-10 flex flex-col text-center bg-dojo-yellow/[0.04] shadow-[0_8px_40px_-12px_rgba(247,194,0,0.12)]">
+          <FadeIn delay={0.1} className="md:col-span-2">
+            <div>
+              <div className="relative border border-dojo-yellow/30 rounded-2xl px-6 py-8 flex flex-col text-center bg-dojo-yellow/4 shadow-[0_8px_40px_-12px_rgba(247,194,0,0.12)]">
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-dojo-yellow text-dojo-black text-[10px] tracking-[0.2em] uppercase px-4 py-1 rounded-full font-medium">
                   Recomendado
                 </span>

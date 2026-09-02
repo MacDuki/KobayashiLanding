@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const links = [
   { label: 'Clases', href: '#clases' },
-  { label: 'Planes', href: '#planes' },
+  { label: 'Horarios', href: '#planes' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Ubicación', href: '#ubicacion' },
 ]
@@ -21,6 +21,10 @@ export default function Navbar() {
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setMenuOpen(false)
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
     const el = document.querySelector(href)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
@@ -67,7 +71,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Abrir menú"
+            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={menuOpen}
             className="md:hidden flex flex-col items-center justify-center gap-1.5 w-10 h-10"
           >
@@ -98,6 +102,15 @@ export default function Navbar() {
                     {label}
                   </a>
                 ))}
+                <a
+                  href="https://wa.me/59897492208"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="mt-3 bg-dojo-yellow text-dojo-black text-center py-3 text-xs tracking-[0.15em] uppercase rounded-lg"
+                >
+                  Reservar clase gratis
+                </a>
               </div>
             </motion.div>
           )}

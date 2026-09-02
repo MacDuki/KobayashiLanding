@@ -20,7 +20,7 @@ export default function Disciplines() {
   const weapon = weapons[current]
 
   return (
-    <section className="bg-dojo-black py-24 md:py-36 px-8 md:px-12">
+    <section className="bg-dojo-black py-14 md:py-20 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-start">
           {/* Karate-Do */}

@@ -53,14 +53,16 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[36vw] xl:w-[42vw] aspect-square rounded-full overflow-hidden flex items-center justify-center"
+          className="relative w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[36vw] xl:w-[42vw] aspect-square rounded-full flex items-center justify-center"
         >
-          <img
-            src="/images/bg_hero_central.png"
-            alt="Kobayashi Karate Dojo"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-dojo-black/55" />
+          <div className="absolute inset-0 overflow-hidden rounded-full">
+            <img
+              src="/images/bg_hero_central.png"
+              alt="Kobayashi Karate Dojo"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-dojo-black/55" />
+          </div>
           <div className="relative px-6 sm:px-10 md:px-16 text-center">
             <motion.p
               initial={{ opacity: 0 }}
@@ -75,9 +77,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight text-dojo-cream"
+              className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-dojo-cream"
             >
-              Kobayashi
+              Karate y Kobudo<span className="md:block"> en Montevideo</span>
             </motion.h1>
 
             <motion.div
@@ -88,7 +90,8 @@ export default function Hero() {
             >
               <span className="w-8 md:w-10 h-px bg-dojo-yellow" />
               <p className="font-display italic text-dojo-cream/70 text-sm md:text-lg">
-                Estilo Shorin Ryu
+                <span className="block sm:inline">Kobayashi Uruguay ·</span>{' '}
+                <span className="block sm:inline">Estilo Shorin Ryu</span>
               </p>
               <span className="w-8 md:w-10 h-px bg-dojo-yellow" />
             </motion.div>
@@ -103,9 +106,9 @@ export default function Hero() {
                 href="https://wa.me/59897492208"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-dojo-cream/80 hover:text-dojo-yellow text-xs md:text-sm tracking-[0.2em] uppercase transition-colors duration-500 pb-2 border-b border-dojo-cream/20 hover:border-dojo-yellow/50"
+                className="inline-flex items-center justify-center bg-dojo-yellow text-dojo-black hover:bg-dojo-cream px-5 py-3 text-xs md:text-sm tracking-[0.15em] uppercase transition-colors duration-300 rounded-lg"
               >
-                Primera clase gratuita
+                Reservar primera clase gratis
               </a>
             </motion.div>
           </div>

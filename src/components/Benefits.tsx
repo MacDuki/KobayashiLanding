@@ -1,10 +1,10 @@
 import {
-  PiPersonSimpleRun,
   PiArrowsOut,
   PiBrain,
-  PiShieldCheck,
   PiHandsPraying,
   PiHeartbeat,
+  PiPersonSimpleRun,
+  PiShieldCheck,
   PiSword,
   PiTrendUp,
 } from "react-icons/pi";
@@ -29,17 +29,17 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="bg-dojo-black py-24 md:py-36 px-8 md:px-12">
+    <section className="bg-dojo-black py-14 md:py-20 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 md:translate-x-28">
             <FadeIn>
-              <div className="relative overflow-hidden rounded-2xl">
+              <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-2xl">
                 <img
                   src="/images/alumno_1_final.png"
                   alt="Alumno de Kobayashi Uruguay"
                   loading="lazy"
-                  className="w-full object-contain"
+                  className="w-full h-auto object-contain"
                 />
                 <div className="absolute inset-0 bg-dojo-black/20" />
               </div>

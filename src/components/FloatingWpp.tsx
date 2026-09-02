@@ -1,19 +1,11 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FloatingWpp() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight
-      const pastHero = window.scrollY > heroHeight * 0.6
-
-      if (!pastHero) {
-        setVisible(false)
-        return
-      }
-
       const locationEl = document.getElementById('ubicacion')
       if (locationEl) {
         const locationBottom = locationEl.getBoundingClientRect().bottom
@@ -24,6 +16,7 @@ export default function FloatingWpp() {
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
