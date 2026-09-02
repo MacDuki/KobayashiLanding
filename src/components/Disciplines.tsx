@@ -130,10 +130,10 @@ export default function Disciplines() {
                     width="900"
                     height="600"
                     loading="lazy"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.4 }}
+                    initial={{ opacity: 0, scale: 1.05, x: 40 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, x: -40 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </AnimatePresence>
