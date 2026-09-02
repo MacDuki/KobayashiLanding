@@ -5,18 +5,18 @@ export default function FinalCTA() {
     <section className="bg-dojo-black py-24 md:py-48 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
         <FadeIn>
-          <div className="max-w-3xl">
+          <div className="max-w-5xl mx-auto text-center overflow-hidden">
             <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-yellow mb-10">
               Empezá hoy
             </p>
-            <p className="font-display text-4xl md:text-6xl lg:text-7xl leading-none text-dojo-cream mb-8">
+            <p className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-none text-dojo-cream mb-8 whitespace-nowrap">
               Tu primera clase es gratuita.
             </p>
-            <p className="text-dojo-cream/60 text-base md:text-lg leading-relaxed mb-12 max-w-xl">
+            <p className="text-dojo-cream/60 text-base md:text-lg leading-relaxed mb-12 max-w-xl mx-auto">
               Sin matrícula. Sin compromiso. Solo traé ropa cómoda y las ganas de descubrir un camino con más de tres siglos de historia.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href="https://wa.me/59897492208"
                 target="_blank"
@@ -28,7 +28,7 @@ export default function FinalCTA() {
                 </svg>
                 Escribinos por WhatsApp
               </a>
-              <div className="text-dojo-muted text-sm space-y-1">
+              <div className="text-dojo-muted text-sm space-y-1 text-center">
                 <p>+598 97 492 208</p>
                 <p>+598 99 213 661</p>
               </div>

@@ -39,7 +39,7 @@ export default function Benefits() {
                   src="/images/alumno_1_final.png"
                   alt="Alumno de Kobayashi Uruguay"
                   loading="lazy"
-                  className="w-full aspect-[3/4] object-cover"
+                  className="w-full object-contain"
                 />
                 <div className="absolute inset-0 bg-dojo-black/20" />
               </div>
