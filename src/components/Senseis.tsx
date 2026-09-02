@@ -4,13 +4,13 @@ const senseis = [
   {
     name: "Leopoldo Schiavone",
     rank: "3er Dan",
-    image: "/images/profe_leopoldo.png",
+    image: "/images/optimized/profe_leopoldo.webp",
     alt: "Sensei Leopoldo Schiavone",
   },
   {
     name: "Lucas Le Pera",
     rank: "1er Dan",
-    image: "/images/profe_lucas_final.png",
+    image: "/images/optimized/profe_lucas_final.webp",
     alt: "Sensei Lucas Le Pera",
   },
 ];
@@ -50,6 +50,8 @@ export default function Senseis() {
                   <img
                     src={sensei.image}
                     alt={sensei.alt}
+                    width="700"
+                    height="1244"
                     loading="lazy"
                     className="w-full max-h-[55vh] object-cover senseiImage"
                     style={{ borderRadius: "16px" }}

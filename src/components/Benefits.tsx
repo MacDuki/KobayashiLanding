@@ -36,8 +36,10 @@ export default function Benefits() {
             <FadeIn>
               <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-2xl">
                 <img
-                  src="/images/alumno_1_final.png"
+                  src="/images/optimized/alumno_1_final.webp"
                   alt="Alumno de Kobayashi Uruguay"
+                  width="700"
+                  height="1050"
                   loading="lazy"
                   className="w-full h-auto object-contain"
                 />

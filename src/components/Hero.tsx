@@ -11,8 +11,13 @@ export default function Hero() {
         className="hidden lg:flex flex-col items-center absolute left-0 bottom-0 z-10"
       >
         <img
-          src="/images/profe_lucas_final.png"
+          src="/images/optimized/profe_lucas_final.webp"
           alt="Sensei Lucas Le Pera"
+          width="900"
+          height="780"
+          loading="eager"
+          fetchPriority="low"
+          decoding="async"
           className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
@@ -33,8 +38,13 @@ export default function Hero() {
         className="hidden lg:flex flex-col items-center absolute right-0 bottom-0 z-10"
       >
         <img
-          src="/images/profe_leopoldo_hero.png"
+          src="/images/optimized/profe_leopoldo_hero.webp"
           alt="Sensei Leopoldo Schiavone"
+          width="900"
+          height="974"
+          loading="eager"
+          fetchPriority="low"
+          decoding="async"
           className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
@@ -57,8 +67,13 @@ export default function Hero() {
         >
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <img
-              src="/images/bg_hero_central.png"
+              src="/images/optimized/bg_hero_central.webp"
               alt="Kobayashi Karate Dojo"
+              width="900"
+              height="866"
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-dojo-black/55" />

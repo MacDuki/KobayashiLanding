@@ -11,8 +11,11 @@ export default function Location() {
             </p>
             <h2 className="font-display text-3xl md:text-5xl leading-tight text-dojo-cream mb-8 flex items-center justify-center gap-4">
               <img
-                src="/images/logoCentro de proteccion de choferes.png"
+                src="/images/optimized/logoCentro de proteccion de choferes.webp"
                 alt="Centro Protección de Choferes"
+                width="240"
+                height="240"
+                loading="lazy"
                 className="h-12 md:h-16 w-auto"
               />
               <span>Club Centro Protección de Choferes</span>

@@ -4,9 +4,12 @@ export default function FinalCTA() {
   return (
     <section className="relative overflow-hidden bg-dojo-black border-t border-dojo-cream/10 py-20 md:py-32 px-8 md:px-12">
       <img
-        src="/images/bg_hero_central.png"
+        src="/images/optimized/bg_hero_central.webp"
         alt=""
         aria-hidden="true"
+        width="900"
+        height="866"
+        loading="lazy"
         className="absolute -right-64 top-1/2 w-152 max-w-none -translate-y-1/2 opacity-15 mix-blend-lighten grayscale"
       />
       <div className="relative max-w-6xl mx-auto">
