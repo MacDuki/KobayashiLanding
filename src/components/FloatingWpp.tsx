@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { whatsappUrl } from '../constants'
 
 export default function FloatingWpp() {
   const [visible, setVisible] = useState(false)
@@ -54,7 +55,7 @@ export default function FloatingWpp() {
           />
 
           <a
-            href="https://wa.me/59897492208"
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:bg-[#20bd5a] transition-colors duration-300"

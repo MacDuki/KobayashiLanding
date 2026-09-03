@@ -1,3 +1,4 @@
+import { whatsappUrl } from '../constants'
 import FadeIn from './FadeIn'
 
 const schedule = [
@@ -86,7 +87,7 @@ export default function SchedulePricing() {
                 </ul>
 
                 <a
-                  href="https://wa.me/59897492208"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full text-center py-3 rounded-xl text-xs tracking-[0.15em] uppercase font-medium transition-all duration-500 bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-[0_4px_20px_-4px_rgba(37,211,102,0.3)]"

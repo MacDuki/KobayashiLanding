@@ -1,0 +1,2 @@
+export const whatsappMessage = 'Hola, estoy interesado en las clases de karate y encontré este contacto en la web del Dojo. Quiero coordinar la primer clase'
+export const whatsappUrl = `https://wa.me/59897492208?text=${encodeURIComponent(whatsappMessage)}`

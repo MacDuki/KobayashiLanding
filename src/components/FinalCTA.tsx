@@ -1,3 +1,4 @@
+import { whatsappUrl } from '../constants'
 import FadeIn from './FadeIn'
 
 export default function FinalCTA() {
@@ -29,7 +30,7 @@ export default function FinalCTA() {
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-6 border-t border-dojo-cream/10 pt-6">
               <a
-                href="https://wa.me/59897492208"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium text-sm tracking-[0.15em] uppercase transition-colors duration-500 rounded-xl"

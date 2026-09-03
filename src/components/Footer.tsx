@@ -1,3 +1,5 @@
+import { whatsappUrl } from '../constants'
+
 export default function Footer() {
   return (
     <footer id="footer" className="bg-dojo-black border-t border-dojo-cream/10 px-8 md:px-12 py-12">
@@ -20,7 +22,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://wa.me/59897492208"
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full border border-dojo-cream/20 flex items-center justify-center text-dojo-cream/60 hover:text-[#25D366] hover:border-[#25D366]/40 transition-colors duration-500"

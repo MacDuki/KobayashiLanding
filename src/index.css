@@ -21,6 +21,10 @@
     background-color: #1e1b16;
   }
 
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     background-color: #1e1b16;
     color: #f5f0e8;

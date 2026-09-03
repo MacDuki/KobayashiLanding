@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { whatsappUrl } from '../constants'
 
 const links = [
   { label: 'Clases', href: '#clases' },
@@ -18,15 +19,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    setMenuOpen(false)
-    if (href === '#') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      return
+  const handleMobileLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault()
+    const target = document.getElementById(href.slice(1))
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      window.history.replaceState(null, '', href)
     }
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+
+    setMenuOpen(false)
   }
 
   return (
@@ -42,7 +44,6 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-5 md:px-12 h-20 max-w-[1800px] mx-auto">
           <a
             href="#"
-            onClick={(e) => scrollTo(e, '#')}
             className="flex items-center gap-2 md:gap-3 font-display text-lg md:text-2xl tracking-[0.15em] text-dojo-cream hover:text-white transition-colors duration-500"
           >
             <img
@@ -64,7 +65,6 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                onClick={(e) => scrollTo(e, href)}
                 className="text-dojo-cream/60 hover:text-dojo-cream text-xs tracking-[0.15em] uppercase transition-colors duration-500"
               >
                 {label}
@@ -86,28 +86,21 @@ export default function Navbar() {
         </div>
 
         {/* Mobile dropdown menu */}
-        <AnimatePresence>
-          {menuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden bg-dojo-black/95 backdrop-blur-sm border-t border-dojo-cream/10"
-            >
+        {menuOpen && (
+          <div className="md:hidden bg-dojo-black/95 backdrop-blur-sm border-t border-dojo-cream/10">
               <div className="flex flex-col px-5 py-4 gap-1">
                 {links.map(({ label, href }) => (
                   <a
                     key={href}
                     href={href}
-                    onClick={(e) => scrollTo(e, href)}
+                    onClick={(event) => handleMobileLinkClick(event, href)}
                     className="text-dojo-cream/70 hover:text-dojo-cream py-3 text-sm tracking-[0.15em] uppercase transition-colors duration-500 border-b border-dojo-cream/5 last:border-0"
                   >
                     {label}
                   </a>
                 ))}
                 <a
-                  href="https://wa.me/59897492208"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenuOpen(false)}
@@ -116,9 +109,8 @@ export default function Navbar() {
                   Reservar clase gratis
                 </a>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+          </div>
+        )}
 
         {scrolled && !menuOpen && (
           <motion.div

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { whatsappUrl } from '../constants'
 
 export default function Hero() {
   return (
@@ -118,7 +119,7 @@ export default function Hero() {
               className="mt-6 md:mt-8"
             >
               <a
-                href="https://wa.me/59897492208"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-dojo-yellow text-dojo-black hover:bg-dojo-cream px-5 py-3 text-xs md:text-sm tracking-[0.15em] uppercase transition-colors duration-300 rounded-lg"
