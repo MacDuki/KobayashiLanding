@@ -19,7 +19,7 @@ export default function Hero() {
           loading="eager"
           fetchPriority="low"
           decoding="async"
-          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
+          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain brightness-95 mix-blend-lighten"
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
           <p className="font-display text-lg xl:text-2xl text-dojo-cream leading-tight">
@@ -46,7 +46,7 @@ export default function Hero() {
           loading="eager"
           fetchPriority="low"
           decoding="async"
-          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten"
+          className="h-[50vh] lg:h-[55vh] xl:h-[80vh] w-auto object-contain mix-blend-lighten brightness-90 "
         />
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center whitespace-nowrap">
           <p className="font-display text-lg xl:text-2xl text-dojo-cream leading-tight">
