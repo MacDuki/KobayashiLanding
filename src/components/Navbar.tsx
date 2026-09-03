@@ -53,7 +53,7 @@ export default function Navbar() {
               height="316"
               loading="eager"
               decoding="async"
-              className="h-8 md:h-10 w-auto"
+              className="h-16  md:h-20 w-auto mt-2"
             />
             <span>
               KOBAYASHI <span className="text-dojo-muted font-body text-[10px] md:text-xs tracking-[0.3em] align-middle ml-1 md:ml-2">Uruguay</span>
