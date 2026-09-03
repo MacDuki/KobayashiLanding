@@ -64,9 +64,9 @@ export default function Disciplines() {
   return (
     <section className="bg-dojo-black py-14 md:py-20 px-8 md:px-12">
       <div className="max-w-[1800px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-20 items-stretch">
           {/* Karate-Do */}
-          <div>
+          <div className="flex flex-col">
             <FadeIn>
               <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-yellow mb-8">Karate-Do</p>
               <h2 className="font-display text-4xl md:text-6xl leading-none text-dojo-cream mb-8">
@@ -88,7 +88,7 @@ export default function Disciplines() {
             </FadeIn>
 
             {/* Image break */}
-            <FadeIn delay={0.4}>
+            <FadeIn delay={0.4} className="mt-auto">
               <img
                 src="./images/optimized/caminoDeLasManosVacias.webp"
                 alt="El camino de las manos vacías"
@@ -101,7 +101,7 @@ export default function Disciplines() {
           </div>
 
           {/* Kobudo */}
-          <div>
+          <div className="flex flex-col">
             <FadeIn>
               <p className="text-sm md:text-base tracking-[0.2em] uppercase text-dojo-yellow mb-8">Kobudo — Jinbukai Internacional</p>
               <h2 className="font-display text-4xl md:text-6xl leading-none text-dojo-cream mb-8">
@@ -119,7 +119,7 @@ export default function Disciplines() {
             </FadeIn>
 
             {/* Weapon carousel */}
-            <FadeIn delay={0.3}>
+            <FadeIn delay={0.3} className="mt-auto">
               <div className="mb-8">
                 <div className="flex items-center justify-between gap-4">
                   <button
