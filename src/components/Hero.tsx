@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[36vw] xl:w-[42vw] aspect-square rounded-full flex items-center justify-center"
+          className="relative min-h-0 w-[80vw] sm:w-[70vw] md:w-[55vw] lg:w-[44vw] lg:min-w-[35rem] xl:w-[42vw] aspect-square rounded-full flex items-center justify-center"
         >
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <img
@@ -93,7 +93,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-dojo-cream"
+              className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-tight tracking-tight text-dojo-cream"
             >
               Karate y Kobudo<span className="md:block"> en Montevideo</span>
             </motion.h1>
